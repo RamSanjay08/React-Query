@@ -12,8 +12,7 @@ const POSTS = [
   },
 ];
 
-const Example2 = () => {
-  const queryClient = useQueryClient();
+const UseQueryBasics = () => {
 
   //^useQuery
   const postQuery = useQuery({
@@ -39,4 +38,4 @@ function wait(duaration) {
   return new Promise((resolve) => setTimeout(resolve, duaration));
 }
 
-export default Example2;
+export default UseQueryBasics;

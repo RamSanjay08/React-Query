@@ -1,12 +1,12 @@
 import React from 'react'
-import Example1 from './components/Example1'
-import Example2 from './components/Example2'
+import Basics from './components/Basics'
+import UseQueryBasics from "./components/UseQueryBasics"
 
 const App = () => {
   return (
     <>
-      {/* <Example1 /> */}
-      <Example2 />
+      {/* <Basics /> */}
+      <UseQueryBasics />
     </>
   )
 }
