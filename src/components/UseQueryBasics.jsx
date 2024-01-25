@@ -12,12 +12,20 @@ const POSTS = [
   },
 ];
 
-const UseQueryBasics = () => {
+// /posts -> ["posts"]
+// /posts/1 -> ["posts", post.id]
+// /posts?authorId=1 -> ["posts", { authorId : 1}]
+// /posts/2/comments -> ["posts", post.id, "comments"]
 
+const UseQueryBasics = () => {
   //^useQuery
   const postQuery = useQuery({
     queryKey: ["posts"],
-    queryFn: () => wait(1000).then(() => [...POSTS]),
+    queryFn: (obj) =>
+      wait(1000).then(() => {
+        console.log(obj);
+       return [...POSTS];
+      }),
   });
 
   if (postQuery.isLoading) return <h1>Loading...</h1>;
