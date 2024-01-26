@@ -1,16 +1,37 @@
-import React from 'react'
-import Basics from './components/Basics'
-import UseQueryBasics from "./components/UseQueryBasics/UseQueryBasics"
-import PortListApp from './components/UseQueryBasics/PortListApp'
+import React from "react";
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import Home from "./FetchingData/Home";
+import About from "./FetchingData/About";
+import Blog from "./FetchingData/Blog";
+import ApiFetchQuery from "./ApiFetch/ApiFetchQuery"
 
 const App = () => {
   return (
     <>
-      {/* <Basics /> */}
-      {/* <UseQueryBasics /> */}
-      <PortListApp />
-    </>
-  )
-}
+      {/* <BrowserRouter>
+        <nav >
+          <ul>
+            <li>
+              <Link to="/" >Home</Link>
+            </li>
+            <li>
+              <Link to="about">About</Link>
+            </li>
+            <li>
+              <Link to="blog">Blog</Link>
+            </li>
+          </ul>
+        </nav>
 
-export default App
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="about" element={<About />} />
+          <Route path="blog" element={<Blog />} />
+        </Routes>
+      </BrowserRouter> */}
+      <ApiFetchQuery />
+    </>
+  );
+};
+
+export default App;
